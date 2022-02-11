@@ -1,0 +1,25 @@
+{
+  "name": "rapid-html-development",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build:html": "pug ./views -o ./public -P",
+    "watch:html": "pug ./views -o ./public -P -w",
+    "build:sass": "sass scss:public/assets/css",
+    "watch:sass": "sass scss:public/assets/css -w",
+    "serve": "browser-sync start -s --ss './public' --files './public'",
+    "watch": "concurrently \"npm run watch:html\" \"npm run watch:sass\"",
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
+  },
+  "author": "Pascal Wilbrink<pascal.wilbrink@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "concurrently": "^7.0.0",
+    "livereload": "^0.9.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.49.7"
+  }
+}
