@@ -144,3 +144,4 @@ Change the scripts in the `package.json` to the following
 now we can run `npm start` to start our server and automatically refresh once a change has been made.
 
 ### Complete code
+You can download the [complete code here](https://github.com/pascalwilbrink/rapid-html-development).
